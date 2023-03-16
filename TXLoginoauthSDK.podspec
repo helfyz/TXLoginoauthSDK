@@ -10,13 +10,13 @@ Pod::Spec.new do |s|
   s.social_media_url      = 'https://github.com/helfyz'
   s.source                = { :git => 'https://github.com/helfyz/TXLoginoauthSDK.git', :tag => s.version }
   s.resource              = 'TXLoginoauthSDK/*.bundle'
-  s.vendored_frameworks   = 'TXLoginoauthSDK/*.framework'
+  s.vendored_frameworks   = 'TXLoginoauthSDK/TXLoginoauthSDK.framework'
   s.pod_target_xcconfig   = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.requires_arc          = true
   
   s.subspec 'TYRZUISDK' do |ss|
-    s.vendored_frameworks   = 'TXLoginoauthSDK/*.framework'
+    ss.vendored_frameworks = 'TXLoginoauthSDK/TYRZUISDK.framework'
   end
 
   s.dependency 'TXLoginoauthSDK/TYRZUISDK'
