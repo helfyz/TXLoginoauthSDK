@@ -15,4 +15,10 @@ Pod::Spec.new do |s|
   s.user_target_xcconfig  = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.requires_arc          = true
   
+  s.subspec 'TYRZUISDK' do |ss|
+    s.vendored_frameworks   = 'TXLoginoauthSDK/*.framework'
+  end
+
+  s.dependency 'TXLoginoauthSDK/TYRZUISDK'
+  
 end
